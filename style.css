@@ -1,0 +1,56 @@
+*{
+  margin:0;
+  box-sizing:border-box;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.wrapper{
+  box-shadow:1px 1px 50px #00000063;
+  padding-top:60px;
+  border-radius:20px;
+  padding-bottom:4px;
+}
+
+#InputBox{
+  height:50px;
+  font-size:50px;
+  width:350px;
+  outline:none;
+  padding:15px;
+  font-weight:bold;
+  background:transparent;
+  border:none;
+  margin-bottom:30px;
+}
+
+.Operators{
+  background-color:black;
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+  border-bottom-left-radius:16px;
+  border-bottom-right-radius:16px;
+  display:flex;
+  flex-wrap:wrap;
+  width:350px;
+  gap:50px;
+  padding:20px;
+}
+
+.Operators button{
+  font-size:30px;
+  font-weight:bold;
+  color:white;
+  background:transparent;
+  border:none;
+  flex:1;
+}
+
+.Operators .op{
+  color:#8A8C9C;
+}

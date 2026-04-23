@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  
+  <div class="wrapper">
+   <input id="InputBox" type="text" readonly>
+   <div class="Operators">
+     
+     <button class="op" onclick="Clear()">c</button>
+     <button class="op" onclick="appendTodisplay('+')">+</button>
+     <button class="op" onclick="appendTodisplay('/')">÷</button>
+     <button class="op" onclick="appendTodisplay('-')">-</button>
+     <button onclick="appendTodisplay('1')">1</button>
+     <button onclick="appendTodisplay('2')">2</button>
+     <button onclick="appendTodisplay('3')">3</button>
+     <button class="op" onclick="appendTodisplay('*')">*</button>
+     <button onclick="appendTodisplay('4')">4</button>
+     <button onclick="appendTodisplay('5')">5</button>
+     <button onclick="appendTodisplay('6')">6</button>
+     <button class="op" onclick="appendTodisplay('.')">.</button>
+     <button onclick="appendTodisplay('7')">7</button>
+     <button onclick="appendTodisplay('8')">8</button>
+     <button onclick="appendTodisplay('9')">9</button>
+     <button class="op" onclick="Cal()">=</button>
+     <button onclick="appendTodisplay('0')">0</button>
+     <button class="op" onclick="Delete()">DEL</button>
+   </div>
+</div>
+
+<script>
+  
+  const InputBox = document.getElementById("InputBox");
+  
+  function appendTodisplay(value){
+  InputBox.value += value;
+  }
+  
+  function Clear(){
+    InputBox.value = '';
+  }
+  
+  function Delete(){
+    InputBox.value = InputBox.value.slice(0,-1);
+  }
+  
+  function Cal(){
+  try{InputBox.value = eval(InputBox.value);
+  }catch(error){
+    InputBox.value = "ERROR";
+    
+  }
+  };
+  
+  
+</script>
+  
+</body>
+
+</html>
